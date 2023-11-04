@@ -1,18 +1,20 @@
 
 function bubbleSort(arr) {
+  let count = 1;
 
-    // Iterate through the array
+  while(count > 0) {
+    count = 0;
 
-      // If the current value is greater than its neighbor to the right
-        // Swap those values
+    for(i = 0; i < arr.length; i++) {
+      if(arr[i] > arr[i+ 1]) {
+      [arr[i], arr[i+1]] =  [arr[i + 1], arr[i]];
+      count++;
+       }
+    }
 
-        // Do not move this console.log
+    return arr;
+
+  }
         console.log(arr.join(","));
-
-    // If you get to the end of the array and no swaps have occurred, return
-
-    // Otherwise, repeat from the beginning
-
 }
-
 module.exports = bubbleSort;
